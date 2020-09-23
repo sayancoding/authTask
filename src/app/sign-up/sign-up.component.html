@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="sub_container">
+    <div class="left">
+      <p class="head_title">
+        Sign Up
+      </p>
+      <form [formGroup]="signUp" (ngSubmit)="onSubmit()">
+        <div class="input_box">
+          <i class="material-icons">check_circle</i>
+          <input type="text" formControlName="firstName" placeholder="First Name..">
+        </div>
+        <div class="input_box">
+          <i class="material-icons">check_circle</i>
+          <input type="text" formControlName="lastName" placeholder="Last Name..">
+        </div>
+        <div class="input_box">
+          <i class="material-icons">admin_panel_settings</i>
+          <input type="text" formControlName="email" placeholder="Email..">
+        </div>
+
+        <div class="input_box">
+          <i class="material-icons">vpn_key</i>
+          <input type="password" formControlName="password" placeholder="Password..">
+        </div>
+        <div class="input_box">
+          <i class="material-icons">vpn_key</i>
+          <input type="password" formControlName="confirmPassword" placeholder="Confirm Password..">
+        </div>
+        <button [disabled]="!this.signUp.valid" class="btn" type="submit">Create Account</button>
+      </form>
+      <div class="signIn">
+        <a [routerLink]="[ '/signin' ]">Already have account</a>
+      </div>
+    </div>
+        <div class="right">
+      <img src="../../assets/undraw_working_from_anywhere_ub67.svg" alt="">
+    </div>
+  </div>
+</div>
