@@ -64,6 +64,9 @@
   border-bottom: 1px solid;
   margin-bottom: 22px;
 }
+.input_box:active{
+  border-color: rgb(84, 130, 255);
+}
 input{
   height: 2rem;
   width: 100%;
@@ -96,4 +99,13 @@ button:disabled{
 }
 .signUp{
   margin-top: 12px;
+}
+p.error
+{
+  display: none;
+}
+input.ng-touched.ng-invalid + p.error {
+  display: block;
+  color: rgb(255, 94, 94);
+  transition: 0.8s ease-in-out;
 }
